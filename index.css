@@ -1,10 +1,23 @@
 @font-face {
-    font-family: myFirstFont;
-    src:local("ShareTechMono-Regular-ttf");
+    font-family: "ShareTechMono";
+    src:local("ShareTechMono-Regular-ttf"),
+    url("ShareTechMono-Regular.ttf");
 }
 
-body            {letter-spacing: 0.1px; padding: 0; margin: 0; font-family: 'Share Tech Mono', Monospace, Courier; 
-                font-weight: 400; font-size: 17px; color: #c8c8c8; background: #222;}
+@font-face{
+    font-family: "PTMono";
+    src:local("pt-mono.regular"),
+    url("pt-mono.regular.ttf");
+}
+
+@font-face{
+    font-family: "PTMonoBold";
+    src:local("pt-mono.bold"),
+    url("pt-mono.bold.ttf");
+}
+
+body            {letter-spacing: 0.1px; padding: 0; margin: 0; font-family: "ShareTechMono"; 
+                font-weight: 400; font-size: 17px; color: #c7dcd0; background: #2e222f;}
 html            {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 pre             {padding: 0; margin: 0 0 50px 0;}
 ul              {padding: 0;}
@@ -15,7 +28,7 @@ a:hover         {color: #fff; text-decoration: underline;}
 p               {padding: 0; margin: 10px 0 30px 0;}
 img             {width: 900px; max-width: 900px; margin-bottom: 20px;}
 #page           {max-width: 900px; margin: auto; padding: 0 20px;}
-#content        {max-width:100%; margin: auto;}
+#content        {max-width:100%; margin: auto;font-family:"PTMono";}
 #footer 		{max-width: 900px; margin:auto; margin-top: 55px;}
 .header			{height: 66px; width: 100%; margin: 50px; border-bottom: dotted 1px #444;}
 .logodiv 		{max-width: 900px; margin:auto; padding: 0 20px;}
