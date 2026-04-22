@@ -37,7 +37,7 @@ body            {letter-spacing: 0.1px;
                 font-family: "PTMono"; 
                 font-weight: 400;
                 font-size: 20px; 
-                color: #dacdcd; 
+                color: #fffafa; 
                 background: #2e222f;}
 
 html            {-webkit-font-smoothing: antialiased;
@@ -55,7 +55,7 @@ li              {margin: 15px 0;
                 list-style: none;}
 
 a               {text-decoration: none; 
-                color: #dacdcd;}
+                color: #fffafa ;}
 
 a:hover         {color: #fff; 
                 text-decoration: underline;}
@@ -92,7 +92,7 @@ img             {width: 100%;
                 color: #fff
                 }
 
-.tag            {color: #c8c8c8;}
+.tag            {color: #fffafa;}
 
 .title          {display: inline-block; 
                 margin-bottom: 20px; 
@@ -109,10 +109,11 @@ img             {width: 100%;
 
 h3  {
     font-family: "RobotoMono-Bold";
-    color:#c8c8c8;
+    color:#fffafa;
+    text-decoration: underline;
 }
 
-h3  {
+h2  {
     font-family: "RobotoMono-Bold";
     color:#fff;
 }
