@@ -78,7 +78,7 @@ img             {width: 100%;
 
 .header			{height: 66px; 
                 width: 100%; 
-                margin: 50px; 
+                margin-top: 50px; 
                 border-bottom: dotted 1px #444;}
 
 .logodiv 		{max-width: 80%; 
@@ -137,6 +137,36 @@ ul.gallery > li {
   height: calc(var(--size) - var(--gap));
 }
 
+.about-container{
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 5vh;
+}
+
+.about-image {
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-name {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+}
+
+.about-description {
+  margin: 0;
+  color: #fffafa;
+}
 
 @media only screen and (max-width: 900px)
 {
