@@ -13,38 +13,137 @@
 @font-face{
     font-family: "PTMonoBold";
     src:local("pt-mono.bold"),
-    url("pt-mono.bold.ttf");
+    url("pt-mono.bold.ttf"); 
 }
 
-body            {letter-spacing: 0.1px; padding: 0; margin: 0; font-family: "ShareTechMono"; 
-                font-weight: 400; font-size: 17px; color: #c7dcd0; background: #2e222f;}
-html            {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-pre             {padding: 0; margin: 0 0 50px 0;}
+@font-face {
+    font-family: "Terminal-F4";
+    src: url("Terminal-F4.ttf");
+}
+
+@font-face {
+    font-family: "RobotoMono-Regular";
+    src: url("RobotoMono-Regular.ttf");
+}
+
+@font-face{
+    font-family: "RobotoMono-Bold";
+    src: url("RobotoMono-Bold.ttf");
+}
+
+body            {letter-spacing: 0.1px; 
+                padding: 0;
+                margin: 0;
+                font-family: "PTMono"; 
+                font-weight: 400;
+                font-size: 20px; 
+                color: #dacdcd; 
+                background: #2e222f;}
+
+html            {-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+
+pre             {padding: 0; 
+                margin: 0 0 50px 0;}
+
 ul              {padding: 0;}
-span            {padding: 0; margin: 0 10px 0 0;}
-li              {margin: 15px 0; padding: 0; list-style: none;}
-a               {text-decoration: none; color: #fff;}
-a:hover         {color: #fff; text-decoration: underline;}
-p               {padding: 0; margin: 10px 0 30px 0;}
-img             {width: 900px; max-width: 900px; margin-bottom: 20px;}
-#page           {max-width: 900px; margin: auto; padding: 0 20px;}
-#content        {max-width:100%; margin: auto;font-family:"PTMono";}
-#footer 		{max-width: 900px; margin:auto; margin-top: 55px;}
-.header			{height: 66px; width: 100%; margin: 50px; border-bottom: dotted 1px #444;}
-.logodiv 		{max-width: 900px; margin:auto; padding: 0 20px;}
-.logo			{width: 41px; margin: auto; margin-top: 20px; border: solid 1px #FFF;}
-#list           {margin-bottom: 50px;}
-#post           {max-width: 900px; margin-bottom: 20px; margin-top: -10px; line-height: 28px;}
-.categories		{max-width: 300px; right:0; margin: 40px 60px 0 0; position: fixed; background: #222;
-				text-align: right; z-index: 0;}
-.footdogs       {margin:0 5px}
+span            {padding: 0; 
+                margin: 0 10px 0 0;}
+
+li              {margin: 15px 0; 
+                padding: 0; 
+                list-style: none;}
+
+a               {text-decoration: none; 
+                color: #dacdcd;}
+
+a:hover         {color: #fff; 
+                text-decoration: underline;}
+
+p               {padding: 0; 
+                margin: 10px 0 30px 0;}
+
+img             {width: 100%; 
+                display: flex; 
+                justify-content: center;}
+
+#page           {max-width: 80%; 
+                margin: auto; padding: 0 20px;}
+#content        {max-width:100%; margin: auto;
+                font-family:"RobotoMono-Regular";}
+
+#footer 		{max-width: 900px; 
+                margin:auto; 
+                margin-top: 55px;}
+
+.header			{height: 66px; 
+                width: 100%; 
+                margin: 50px; 
+                border-bottom: dotted 1px #444;}
+
+.logodiv 		{max-width: 80%; 
+                margin:auto; 
+                font-family: "Terminal-F4"}
+
+.logo			{margin: auto; 
+                margin-top: 20px;}
+
+.footdogs       {margin:0 5px;  
+                color: #fff
+                }
+
 .tag            {color: #c8c8c8;}
-.title          {display: inline-block; margin-bottom: 20px; margin-top: 20px; color: #FFF;}
-.filter         {display:block; margin-bottom: auto; margin-top: auto; text-align: right;}
+
+.title          {display: inline-block; 
+                margin-bottom: 20px; 
+                margin-top: 20px; 
+                color: #FFF;}
+
+.filter         {display:block; 
+                margin-top: -28px; 
+                text-align: right;}
+
+.bold_text {
+    font-family: "RobotoMono-Bold";
+}
+
+h3  {
+    font-family: "RobotoMono-Bold";
+    color:#c8c8c8;
+}
+
+h3  {
+    font-family: "RobotoMono-Bold";
+    color:#fff;
+}
+
+ul.gallery {
+  --numcolumns: 2;
+  --gap: 0.25em;
+  --size: calc(50vw / var(--numcolumns));
+  display: grid;
+  grid-template-columns: repeat(var(--numcolumns), 1fr);
+  
+  grid-template-rows: auto;
+  gap: var(--gap);
+  align-items: stretch;
+  
+}
 
 
-@media 			only screen and (max-width: 900px)
+ul.gallery > li {
+  display: block;
+  height: calc(var(--size) - var(--gap));
+}
+
+
+@media only screen and (max-width: 900px)
 {
+ul.gallery{
+    --numcolumns:1;
+}
 img 			{width: 100%;}
 body			{font-size: 19px;}
+
+
 }

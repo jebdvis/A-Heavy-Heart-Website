@@ -31,28 +31,79 @@
 
         <div id="content">
 
-        <div id="page">
+            <div id="page">
 
-            <!--CONTENT -->
-            
-            <div id="list">
+                <h2>
+                    Why Make This Game?
+                </h2>
+                <p>
+                    I wanted to make a game where the gameplay evolves along with other elements in the game, mainly story and environment. A big inspiration for this was the Portal series.
+                    Early on in concepting, I had decided I wanted to talk about struggling with mental health through this game, specifically 
+                    what I struggle with: anxiety and depression. The main in-game driver for this is a device strapped to the player's chest that's 
+                    powered by a black hole. This device comes from a more personal inspiration; I generally describe the physical feeling of anxiety 
+                    and depression as this inwards pull in my chest, almost like a black hole. It acts as the "tangible" metaphor for mental health, but 
+                    it's also the main driver for evolving gameplay, story, and environment to act as a metaphor for how mental health struggle effects the self.
+                </p>
+                <p>
+                    To convey this, I knew I needed to design with intention. This was a solo project during a semester of school(also, my first 3D game), so I not only had to design
+                    with intention of message, but also intention of scope. Everything I designed and created had to have a purpose and a place in the grand scheme of the game.
+                </p>
 
-                <div class="title">
-                DESIGN<br>
-                --
-                </div>
-
-                <div id="post">
-                    
-                </div>
-
-
+                <h2>Design Philosophies</h2>
+                    <ul>
+                        <li>
+                            <h3>Game Design</h3>
+                            <p>
+                                I wanted a tight feeling gameplay that didn't have much fluff; an interesting interaction that felt extensive, but not bloated. A
+                                big inspiration in this aspect was the Katamari Damacy series. To achieve this, I used subtractive game design, which I 
+                                hadn't ever tried to implement intentionally before. This constitutes that only the parts of the game that are meaningful to the overall design 
+                                are kept. Knowing the intention of the game early on in concepting allowed me to consider in what ways were components of gameplay meaningful to 
+                                that intention. Through prototyping, I was able to create a core mechanic that felt it helped to convey my message. 
+                            </p>
+                            <p>
+                                Working on this project solo almost guaranteed that design would at some point fail in my own echochamber, so testing was vital, as it 
+                                usually is. In practicing subtractive game design, it's also useful for determining if elements are actually meaningful to the game as a whole
+                                or if I had just claimed it was meaningful in my head, when, in fact, it was not. This is, as a matter of fact, a game that other people will play, so 
+                                testing that everything is understandable and feels good to a diverse group of people while developing is necessary.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Technical Design</h3>
+                            <p>
+                                It seems so often you hear tale of the dreaded spaghetti code. I imagined this was something I may not be able to avoid completely with my lack of experience
+                                on a game of this scope, but I knew could mitigate it a considerable amount. When creating the gameplay systems in my chosen engine, Godot, I made sure any
+                                systems that weren't one time use was scalable. This also helps with subtractive game design and worry about scope. By making scalable systems, I was able to 
+                                make the size of the game as big as it needed to feel tight and meaningful. Most systems were designed to be modular through components using Godot's Resource type.
+                            </p>
+                            <p>
+                                For the 3D puzzles, the system to move the spheres on the paths of the puzzle is scalable in size, as well as shape, as long as the paths are connected. I also 
+                                created a component based system to add on effects to specific points of the puzzle, specific paths, as well as on the puzzle as a whole. For the 2D puzzle, 
+                                any number of nodes can be added and connected to create a web of nodes to untangle. To facilitate the order and transition between 2D and 3D puzzles, I created 
+                                a state machine that could work for both types of puzzle, loading in the correct puzzle in the sequence of puzzles, as well as controlling when the player can interact
+                                with which type of puzzle.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Aesthetics Design</h3>
+                            <p>
+                                The game's aesthetics had to build on the intention I had for this game, but it also had to fit my goal of scope and actually being meaningful to the message
+                                I want to convey. I knew that the aesthetics had to be minimal, but I still needed room for the stylization that could help convey meaning. 
+                            </p>
+                            <p>
+                                My original concepting for the visuals of this game was low poly 3D models with stylized texturing. After initial testing of this original visual style, I quickly
+                                realized it was going to add too much to the scope, and it also was not feeling like it belonged to this game. I quickly pivoted under the pretenses mentioned earlier
+                                of scope and minimizing that which wasn't meaningful. I needed something that was going to communicate my intention, but also was going to be doable in scope of the 
+                                project. 
+                            </p>
+                            <p>
+                                The visual style was changed to use Godot's realistic lighting features while utilizing a dither post-process shader, inspired by <a href = "https://www.youtube.com/watch?v=cfipwefB0Ac">Antti Tiihonen</a>.
+                                The dither shader adds to the eeriness of the game, but it also lets me control colors through a limited palette. This also lets me get away with more minimal texturing on 
+                                models. All textured models in the game are either done through emissive textures or noise textures in the normal channel of the models.
+                                This, coupled with the post-process shader makes the environment feel a lot less flat, even though all 3D models have simple flat colors for their albedo.
+                            </p>
+                        </li>
+                    </ul>
             </div>
-            
-             
-
-                
-                </div>
 
         </div>
 
