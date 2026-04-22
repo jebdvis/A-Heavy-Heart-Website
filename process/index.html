@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Heavy Heart</title>
     <link rel ="stylesheet" href = "/index.css">
+    <style>
+        .iteration{
+            padding-top: 20px;
+            border-top: dotted 1px #fcfaff;
+        }
+    </style>
 </head>
 <body>
             <div id="header" class="header">
@@ -44,7 +50,7 @@
                         <p>The original idea for visuals had the 3D models of the world be low poly with pixelated texturing. My plan for post-processing shaders was minimal and was just to tie visuals together. In engine testing of this was reminiscent of Minecraft, which was not what I wanted to go for. The process of texture painting everything and making sure those textures were consistent across objects also was not viable with time constraints.</p>
                     </li>
                     <li>
-                        <h2>Iteration 1</h2>
+                        <h2 class = "iteration">Iteration 1</h2>
                         <h3>Puzzle Design</h3>
                         <p>The proof of concept I had for the 3D puzzles was a solid starting point, so I started adding some abilities and effects on the puzzles. The first one that I made was a shifting ability, that allowed the player to press a button that would toggle between the visiblity of two puzzles. This ability was meant to have the player solving two of the 3D puzzles at once, though one would always be invisible. I also started work on a portal ability that let the player teleport a sphere from a specific point on the portal to another point and a "time dilation" effect I could place on a path of the puzzle that would make a sphere on it slow down.</p>
                         <p>The base of the 2D puzzles were also created in this first iteration. I took inspiration from a game of the Cube Escape series, The Cave, for this puzzle. The 2D puzzles are supposed to represent this creep of anxiety and depression on everyday tasks, so I didn't want them to become terribly interesting as they got harder. Being able to add more things to untangle in these puzzles fit that bill well.</p>
@@ -55,7 +61,7 @@
                         <p>After concepting, I set out to do a visual redesign. Taking inspiration from a <u style = "text-decoration-style: dotted";><a href = "https://www.youtube.com/watch?v=cfipwefB0Ac">video</a></u> I saw from GodotFest, I decided to switch to using a heavier post-process shader, real time lighting, and minimal texturing. Using the shader and lighting, I had control of how things could look in my game world, it provided consistency, and it minimized the amount of texturing that had to be done.</p>
                     </li>
                     <li>
-                        <h2>Iteration 2</h2>
+                        <h2 class = "iteration">Iteration 2</h2>
                         <h3>First Test Round</h3>
                         <p>I had my implemented 2D puzzles and 3D puzzle abilities and effects, which now needed to be tested. I found that the new control scheme needed more tutorial to get used to, but once it was learned, it felt intuitive. The base 3D and 2D puzzles felt good with testers as well. Through this testing, I found that the abilities and effects I had added weren't meaningful to the 3D puzzle interaction. These abilities and effects were scrapped, though the code for the portal ability was salvagable for a later implemented ability.</p>
                         <h3>Visuals</h3>
@@ -67,7 +73,7 @@
                         <p>Using feedback from testing and the narrative beats, I created new abilities and effects that would be introduced over these beats. These new mechanics were: gates that only let certain spheres through, an effect on the whole puzzle that made the paths morph out of shape, and I also brough back portals, but now they had to be lined up visually to be activated.</p>
                     </li>
                     <li>
-                        <h2>Iteration 3</h2>
+                        <h2 class = "iteration">Iteration 3</h2>
                         <h3>Puzzle Progression</h3>
                         <p>I needed to test the order the puzzles were presented in next. I created a state machine to facilitate the ordering of the puzzles and when the player could interact with a specific puzzle. The state machine for each puzzle type held the order of the puzzles and the puzzle files, communicating with the respective puzzle controller when a puzzle needed to be loaded.</p>
                         <h3>Second Test Round</h3>
@@ -80,7 +86,7 @@
                         <p>Up until this point, only the 3D puzzles could be played with a gamepad while the rest of the game had to be played on mouse and keyboard. This wasn't a very viable control scheme it turns out, so I consolidated all input for the game to gamepad input.</p>
                     </li>
                     <li>
-                        <h2>Final Iteration</h2>
+                        <h2 class = "iteration">Final Iteration</h2>
                         <h3>Visuals</h3>
                         <p>The terminal and the 2D puzzle assets were completed and implemented into the engine. I also created the starting screen for the game at the same time. The black hole in the open screen is the same as the "eye" in the terminal, just from different camera angles in Blender.</p>
                         <p>The environment still looked flat, even with post-process shaders. Time constraints didn't permit me to texture paint and make all the 3D assets look consistent, so I added noise textures to the models' normal maps.</p>

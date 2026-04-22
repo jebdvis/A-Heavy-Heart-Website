@@ -31,13 +31,23 @@
     src: url("RobotoMono-Bold.ttf");
 }
 
+@font-face{
+    font-family: "RobotoMono-Thin";
+    src: url("RobotoMono-Thin.ttf");
+}
+
+@font-face{
+    font-family: "RobotoMono-Medium";
+    src: url("RobotoMono-Medium.ttf");
+}
+
 body            {letter-spacing: 0.1px; 
                 padding: 0;
                 margin: 0;
                 font-family: "PTMono"; 
                 font-weight: 400;
-                font-size: 20px; 
-                color: #fffafa; 
+                font-size: 16px; 
+                color: #fcfaff ; 
                 background: #2e222f;}
 
 html            {-webkit-font-smoothing: antialiased;
@@ -55,7 +65,7 @@ li              {margin: 15px 0;
                 list-style: none;}
 
 a               {text-decoration: none; 
-                color: #fffafa ;}
+                color: #fcfaff ;}
 
 a:hover         {color: #fff; 
                 text-decoration: underline;}
@@ -108,13 +118,13 @@ img             {width: 100%;
 }
 
 h3  {
-    font-family: "RobotoMono-Bold";
-    color:#fffafa;
+    font-family: "RobotoMono-Medium";
+    color:#fcfaff;
     text-decoration: underline;
 }
 
 h2  {
-    font-family: "RobotoMono-Bold";
+    font-family: "RobotoMono-Medium";
     color:#fff;
 }
 
@@ -166,6 +176,28 @@ ul.gallery > li {
 .about-description {
   margin: 0;
   color: #fffafa;
+}
+
+#video-container {
+  /* Optional: Limit container width (e.g., 1200px on large screens) */
+  max-width: 80vw;
+  margin: 0 auto; /* Center container */
+  padding: 20px;
+}
+ 
+#video-container video {
+  width: 100%; /* Fit container width */
+  height: auto; /* Auto-calculate height to preserve aspect ratio */
+  display: block; /* Remove inline spacing artifacts */
+}
+#heroimage{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#loreblurb{
+    text-align: center;
+    padding:50px;
 }
 
 @media only screen and (max-width: 900px)
