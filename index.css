@@ -1,44 +1,44 @@
 @font-face {
     font-family: "ShareTechMono";
     src:local("ShareTechMono-Regular-ttf"),
-    url("ShareTechMono-Regular.ttf");
+    url("fonts/ShareTechMono-Regular.ttf");
 }
 
 @font-face{
     font-family: "PTMono";
     src:local("pt-mono.regular"),
-    url("pt-mono.regular.ttf");
+    url("fonts/pt-mono.regular.ttf");
 }
 
 @font-face{
     font-family: "PTMonoBold";
     src:local("pt-mono.bold"),
-    url("pt-mono.bold.ttf"); 
+    url("fonts/pt-mono.bold.ttf"); 
 }
 
 @font-face {
     font-family: "Terminal-F4";
-    src: url("Terminal-F4.ttf");
+    src: url("fonts/Terminal-F4.ttf");
 }
 
 @font-face {
     font-family: "RobotoMono-Regular";
-    src: url("RobotoMono-Regular.ttf");
+    src: url("fonts/RobotoMono-Regular.ttf");
 }
 
 @font-face{
     font-family: "RobotoMono-Bold";
-    src: url("RobotoMono-Bold.ttf");
+    src: url("fonts/RobotoMono-Bold.ttf");
 }
 
 @font-face{
     font-family: "RobotoMono-Thin";
-    src: url("RobotoMono-Thin.ttf");
+    src: url("fonts/RobotoMono-Thin.ttf");
 }
 
 @font-face{
     font-family: "RobotoMono-Medium";
-    src: url("RobotoMono-Medium.ttf");
+    src: url("fonts/RobotoMono-Medium.ttf");
 }
 
 body            {letter-spacing: 0.1px; 
@@ -79,38 +79,38 @@ img             {width: 100%;
 
 #page           {max-width: 80%; 
                 margin: auto; padding: 0 20px;}
+                
 #content        {max-width:100%; margin: auto;
                 font-family:"RobotoMono-Regular";}
 
-#footer 		{max-width: 900px; 
-                margin:auto; 
-                margin-top: 55px;}
-
 .header			{height: 66px; 
                 width: 100%; 
-                margin-top: 50px; 
-                border-bottom: dotted 1px #444;}
+                border-bottom: dotted 1px #444;
+                align-items: center;
+            }
 
 .logodiv 		{max-width: 80%; 
                 margin:auto; 
-                font-family: "Terminal-F4"}
+                font-family: "Terminal-F4";
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%
+            }
 
-.logo			{margin: auto; 
-                margin-top: 20px;}
+.logo			{
+                text-align: left;
+                }
 
-.footdogs       {margin:0 5px;  
+.footdogs       {
+                margin:0 5px;  
                 color: #fff
                 }
 
 .tag            {color: #fffafa;}
 
-.title          {display: inline-block; 
-                margin-bottom: 20px; 
-                margin-top: 20px; 
-                color: #FFF;}
-
-.filter         {display:block; 
-                margin-top: -28px; 
+.filter         {display:flex; 
+                align-items: center;
                 text-align: right;}
 
 .bold_text {
@@ -130,21 +130,19 @@ h2  {
 
 ul.gallery {
   --numcolumns: 2;
-  --gap: 0.25em;
+  --gap: 1em;
   --size: calc(50vw / var(--numcolumns));
   display: grid;
   grid-template-columns: repeat(var(--numcolumns), 1fr);
   
-  grid-template-rows: auto;
   gap: var(--gap);
-  align-items: stretch;
   
 }
 
 
 ul.gallery > li {
   display: block;
-  height: calc(var(--size) - var(--gap));
+  margin:auto;
 }
 
 .about-container{
@@ -179,16 +177,14 @@ ul.gallery > li {
 }
 
 #video-container {
-  /* Optional: Limit container width (e.g., 1200px on large screens) */
-  max-width: 80vw;
-  margin: 0 auto; /* Center container */
+  margin: 0 auto; 
   padding: 20px;
 }
  
 #video-container video {
-  width: 100%; /* Fit container width */
-  height: auto; /* Auto-calculate height to preserve aspect ratio */
-  display: block; /* Remove inline spacing artifacts */
+  width: 100%; 
+  height: auto; 
+  display: block; 
 }
 #heroimage{
     padding-top: 50px;
@@ -200,6 +196,27 @@ ul.gallery > li {
     padding:50px;
 }
 
+.image-container{
+    display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+    margin:auto;  
+    gap:100px; 
+}
+
+.image-container > img{
+    display: block;
+    margin:auto;   
+    padding-bottom: 20px;
+}
+
+.individual-img{
+    max-width: 60vw;
+    margin:auto; 
+    margin:auto;
+    padding-bottom: 20px;
+}
+
 @media only screen and (max-width: 900px)
 {
 ul.gallery{
@@ -207,6 +224,17 @@ ul.gallery{
 }
 img 			{width: 100%;}
 body			{font-size: 19px;}
+.logodiv{
+    flex-direction: column;
+}
+
+.header			{
+                height: 150px; 
+                width: 100%; 
+                border-bottom: dotted 1px #444;
+                align-items: center;
+            }
+
 
 
 }
