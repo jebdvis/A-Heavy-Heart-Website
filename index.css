@@ -94,7 +94,7 @@ img             {width: 100%;
                 font-family: "Terminal-F4";
                 display:flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items:center;
                 height: 100%
             }
 
