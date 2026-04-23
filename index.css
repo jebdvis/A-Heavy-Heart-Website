@@ -138,7 +138,7 @@ ul.gallery {
 ul.gallery > li {
     display: block;
     margin: auto;
-    min-width: 0; /* Fixed: prevents Safari flex/grid children from overflowing */
+    min-width: 0; 
 }
 
 .about-container {
