@@ -73,7 +73,7 @@ a:hover         {color: #fff;
 p               {padding: 0; 
                 margin: 10px 0 30px 0;}
 
-img             {width: 100%; 
+img             {
                 display: flex; 
                 justify-content: center;}
 
@@ -199,21 +199,23 @@ ul.gallery > li {
 .image-container{
     display: flex;
     flex-direction: row;
-    max-width: 60vw;
+    width: 60vw;
     margin:auto;  
     gap:100px; 
+     min-width: 0;
 }
 
 .image-container > img{
     display: block;
     margin:auto;   
     padding-bottom: 20px;
+    width: 100%;
+    min-width: 0;
 }
 
 .individual-img{
     max-width: 60vw;
     margin:auto; 
-    margin:auto;
     padding-bottom: 20px;
 }
 
